@@ -59,6 +59,7 @@ function changeId() {
 elementButtonClass_b5.addEventListener("click", changeId);
 
 //#7 Change text
+
 const elementWithText = document.querySelector(".t6");
 const elementButtonClass_b6 = document.querySelector(".b6");
 
@@ -67,3 +68,54 @@ function changeText() {
 }
 
 elementButtonClass_b6.addEventListener("click", changeText);
+
+//#8 Change HTML
+
+const elementChangeHTML = document.querySelector(".t7");
+const elementButtonClass_b7 = document.querySelector(".b7");
+
+function changeHTML() {
+  elementChangeHTML.innerHTML = "Измененное содержимое";
+}
+
+elementButtonClass_b7.addEventListener("click", changeHTML);
+
+//#9 Change font-size
+
+const elementChangeFontSize = document.querySelector(".t8");
+const elementButtonClass_b8 = document.querySelector(".b8");
+
+function changeFontSize() {
+  elementChangeFontSize.style.fontSize = "36px";
+}
+elementButtonClass_b8.addEventListener("click", changeFontSize);
+
+// #10 add class "hi"
+
+const elementAddClass = document.querySelector(".t9");
+const elementButtonClass_b9 = document.querySelector(".b9");
+
+function addClass() {
+  elementAddClass.className = "hi";
+}
+elementButtonClass_b9.addEventListener("click", addClass);
+
+// #11 remove class "hi"
+
+const elementRemoveClass = document.querySelector(".t10");
+const elementButtonClass_b10 = document.querySelector(".b10");
+
+function removeClass() {
+  elementRemoveClass.classList.remove("hi");
+}
+elementButtonClass_b10.addEventListener("click", removeClass);
+
+// #12 toggle hi
+
+const elementToggleClass = document.querySelector(".t11");
+const elementButtonClass_b11 = document.querySelector(".b11");
+
+function toggleClass() {
+  elementToggleClass.classList.toggle("hi");
+}
+elementButtonClass_b11.addEventListener("click", toggleClass);
