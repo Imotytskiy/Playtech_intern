@@ -119,3 +119,11 @@ function toggleClass() {
   elementToggleClass.classList.toggle("hi");
 }
 elementButtonClass_b11.addEventListener("click", toggleClass);
+
+//#13 attr class element target
+
+const elementDom = document.querySelector(".t13");
+
+document.addEventListener("click", function (event) {
+  elementDom.textContent = event.target.classList;
+});
