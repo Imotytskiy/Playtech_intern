@@ -57,3 +57,13 @@ function changeId() {
 }
 
 elementButtonClass_b5.addEventListener("click", changeId);
+
+//#7 Change text
+const elementWithText = document.querySelector(".t6");
+const elementButtonClass_b6 = document.querySelector(".b6");
+
+function changeText() {
+  elementWithText.textContent = "new TEXT";
+}
+
+elementButtonClass_b6.addEventListener("click", changeText);
