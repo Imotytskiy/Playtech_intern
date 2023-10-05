@@ -138,3 +138,24 @@ function TranslateClass() {
     elementTranslateClass.getAttribute("data-en");
 }
 elementButtonClass_b13.addEventListener("click", TranslateClass);
+
+//#15 resize window change color
+
+const onresize = function () {
+  const elementTranslateClass = document.querySelector(".t99");
+  width = document.body.clientWidth;
+  height = document.body.clientHeight;
+  elementTranslateClass.style.backgroundColor =
+    "#" + Math.floor(Math.random() * (width * height)).toString(16);
+};
+
+window.addEventListener("resize", onresize);
+
+// #16 length input
+
+const valueLength = document.querySelector(".t98-2");
+const input = document.querySelector("input");
+
+input.addEventListener("input", (event) => {
+  valueLength.textContent = input.value.length;
+});
