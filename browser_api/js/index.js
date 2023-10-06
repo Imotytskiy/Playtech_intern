@@ -159,3 +159,157 @@ const input = document.querySelector("input");
 input.addEventListener("input", (event) => {
   valueLength.textContent = input.value.length;
 });
+
+// #17 data Jasmine
+const elementButtonClass_b14 = document.querySelector(".b14");
+const containerForUnstall = document.querySelector(".whores-container");
+
+const wDiv = document.createElement("div");
+wDiv.className = "whore";
+
+const wNameDiv = document.createElement("div");
+wNameDiv.className = "whore-name";
+wNameDiv.textContent = jasmine.name;
+
+const wImage = document.createElement("img");
+wImage.src = jasmine.photo;
+wImage.width = "200";
+
+const wAgeDiv = document.createElement("div");
+wAgeDiv.className = "whore-age";
+wAgeDiv.textContent = `Возраст: ${jasmine.photo}`;
+
+const wBoobsDiv = document.createElement("div");
+wBoobsDiv.className = "whore-boobs";
+wBoobsDiv.textContent = `Размер : ${jasmine.boobs}`;
+
+const wHeightDiv = document.createElement("div");
+wHeightDiv.className = "whore-height";
+wHeightDiv.textContent = `Рост: ${jasmine.weight}`;
+
+const wWeightDiv = document.createElement("div");
+wWeightDiv.className = "whore-weight";
+wWeightDiv.textContent = `Вес : ${jasmine.weight}`;
+
+const wPhoneDiv = document.createElement("div");
+wPhoneDiv.className = "whore-phone";
+wPhoneDiv.textContent = jasmine.phone;
+
+const wCanComeDiv = document.createElement("div");
+wCanComeDiv.className = "whore-can-come";
+wCanComeDiv.textContent = `Выезд : ${jasmine.can_come === true ? "+" : "-"}`;
+
+const wTeaserDiv = document.createElement("div");
+wTeaserDiv.className = "whore-teaser";
+wTeaserDiv.textContent = `${jasmine.teaser}`;
+function addNewCard() {
+  containerForUnstall.appendChild(wDiv);
+  wDiv.appendChild(wNameDiv);
+  wDiv.appendChild(wImage);
+  wDiv.appendChild(wAgeDiv);
+  wDiv.appendChild(wBoobsDiv);
+  wDiv.appendChild(wHeightDiv);
+  wDiv.appendChild(wWeightDiv);
+  wDiv.appendChild(wPhoneDiv);
+  wDiv.appendChild(wCanComeDiv);
+  wDiv.appendChild(wTeaserDiv);
+}
+
+elementButtonClass_b14.addEventListener("click", addNewCard);
+
+// #18 toogle for fish
+const elementButtonClass_b15 = document.querySelector(".b15");
+
+function changeCatFish() {
+  const fishImage1 = document.querySelector(".cat-container-1 .fish");
+  const fishImage2 = document.querySelector(".cat-container-2 .fish");
+  const catContainer1 = document.querySelector(".cat-container-1");
+  const catContainer2 = document.querySelector(".cat-container-2");
+
+  if (fishImage1 && catContainer2) {
+    fishImage1.remove();
+    catContainer2.appendChild(fishImage1);
+  }
+  catContainer1.appendChild(fishImage2);
+}
+
+elementButtonClass_b15.addEventListener("click", changeCatFish);
+
+// #19 remove teeth
+const elementButtonClass_b16 = document.querySelector(".b16");
+
+const tooth = document.querySelector(".tooth");
+
+function removeTooth() {
+  const tooth = document.querySelector(".tooth");
+  if (tooth) {
+    tooth.remove();
+  }
+}
+
+elementButtonClass_b16.addEventListener("click", removeTooth);
+
+// #20 skier
+const elementButtonClass_b17 = document.querySelector(".b17");
+const elementButtonClass_b17_2 = document.querySelector(".b17-2");
+
+const elementToShift = document.querySelector(".skier");
+let currentPosition = 0;
+let intervalId = 0;
+
+function shiftSkier() {
+  currentPosition += 5;
+
+  elementToShift.style.transform = `translateX(${currentPosition}px) scaleX(-1)`;
+}
+
+elementButtonClass_b17.addEventListener("click", () => {
+  clearInterval(intervalId);
+  intervalId = setInterval(shiftSkier, 16);
+});
+
+elementButtonClass_b17_2.addEventListener("click", () => {
+  clearInterval(intervalId);
+  currentPosition = 0;
+});
+
+// #21  write mikki from array
+// const mikkiGrid = document.getElementById("mikki_tiles");
+
+// // Loop through each row in the "mikki" array
+// mikki.forEach(function (row) {
+//   // Create a new row element
+//   var rowElement = document.createElement("div");
+//   rowElement.className = "mikki_row";
+
+//   // Loop through each character in the row
+//   for (var i = 0; i < row.length; i++) {
+//     // Create a new tile element
+//     var tileElement = document.createElement("div");
+//     tileElement.className = "mikki_tile";
+
+//     // Check if the character is 'X' and add a class for filled tiles
+//     if (row[i] === "X") {
+//       tileElement.classList.add("filled");
+//     }
+
+//     // Append the tile element to the row
+//     rowElement.appendChild(tileElement);
+//   }
+
+//   // Append the row to the grid
+//   mikki_tiles.appendChild(rowElement);
+// });
+
+// last remove ad
+
+const elementButtonClass_b97 = document.querySelector(".b97");
+const elementButtonClass_t97 = document.querySelector(".t97");
+if (localStorage.getItem("Ad") === "None") {
+  elementButtonClass_b97.style.display = "none";
+}
+
+elementButtonClass_b97.addEventListener("click", () => {
+  localStorage.setItem("Ad", "None");
+  elementButtonClass_t97.style.display = "none";
+});
