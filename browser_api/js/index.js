@@ -323,6 +323,27 @@ tabs.forEach((tab) => {
     });
   });
 });
+// caurusel
+
+const elementButtonClass_next = document.querySelector(".next");
+const elementButtonClass_previous = document.querySelector(".previous");
+const slide = document.querySelectorAll(".slide");
+let index = 1;
+elementButtonClass_next.addEventListener("click", () => {});
+elementButtonClass_previous.addEventListener("click", () => {});
+
+// accordion
+
+const dtElements = document.querySelectorAll("dt");
+
+dtElements.forEach((dt) => {
+  dt.addEventListener("click", (event) => {
+    dtElements.forEach((dt) => {
+      dt.classList.remove("active");
+    });
+    dt.classList.add("active");
+  });
+});
 
 //  pop_up task
 
