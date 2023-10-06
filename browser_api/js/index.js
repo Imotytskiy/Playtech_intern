@@ -273,7 +273,7 @@ elementButtonClass_b17_2.addEventListener("click", () => {
   currentPosition = 0;
 });
 
-// #21  write mikki from array
+// // #21  write mikki from array
 // const mikkiGrid = document.getElementById("mikki_tiles");
 
 // // Loop through each row in the "mikki" array
@@ -298,8 +298,57 @@ elementButtonClass_b17_2.addEventListener("click", () => {
 //   }
 
 //   // Append the row to the grid
-//   mikki_tiles.appendChild(rowElement);
+//   mikkiGrid.appendChild(rowElement);
 // });
+
+const tabs = document.querySelectorAll(".item");
+let activeTabValue;
+let activeTab;
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    activeTab = tab;
+    activeTabValue = tab.getAttribute("data-tab");
+    console.log(activeTabValue);
+
+    tabs.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    let allTabs = document.querySelectorAll(`[data-tab="${activeTabValue}"]`);
+    console.log(allTabs);
+
+    allTabs.forEach((item) => {
+      item.classList.add("active");
+    });
+  });
+});
+
+//  pop_up task
+
+const elementButtonClass_overlay = document.querySelector(".overlay");
+const elementButtonClass_pop_up = document.querySelector(".pop-up");
+const elementButtonClass_login = document.querySelector(".show-login-pop-up");
+const elementButtonClass_close = document.querySelector(".close");
+
+function showPop_up() {
+  elementButtonClass_overlay.classList.remove("hidden");
+  elementButtonClass_pop_up.classList.remove("hidden");
+}
+
+function closePop_up() {
+  elementButtonClass_overlay.classList.add("hidden");
+  elementButtonClass_pop_up.classList.add("hidden");
+}
+
+elementButtonClass_login.addEventListener("click", showPop_up);
+elementButtonClass_close.addEventListener("click", closePop_up);
+//  prevent default
+const elementButtonLink = document.querySelector(".link-ebanoe");
+
+elementButtonLink.addEventListener("click", (event) => {
+  event.preventDefault();
+});
 
 // last remove ad
 
