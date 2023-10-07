@@ -274,8 +274,68 @@ elementButtonClass_b17_2.addEventListener("click", () => {
 });
 
 // // #21  write mikki from array
-// const mikkiGrid = document.getElementById("mikki_tiles");
+const mikkiGrid = document.getElementById("mikki_tiles");
+const cts = canvas.getContext("2d");
+const tileSize = 32;
 
+const tileMap = new TileMap(tileSize);
+
+function mikki() {
+  tileMap.draw(canvas, ctx);
+}
+
+var mikki = [
+  "XXXX        XXXX  ",
+  " XXXXXX      XXXXXX ",
+  "XXXX XX XXXX XX XXXX",
+  "XXX  XXXXXXXXXX  XXX",
+  "XXXXXXXXXXXXXXXXXXXX",
+  "XXXXXXX      XXXXXXX",
+  " XXXXX        XXXXX ",
+  "   XXX  XX XX XXX   ",
+  "    XX  XX XX XX    ",
+  "    XXX X  X  XX    ",
+  "    X         XX    ",
+  "    X    XXX  XX    ",
+  "    XX   XXX  XX    ",
+  "     XX      XX     ",
+  "      X  XX  X      ",
+  "       X    X       ",
+  "     XX XXXX XX     ",
+  "     XX      XX     ",
+  "    XX        XX    ",
+  "   XXXXXXXXXXXXXX   ",
+];
+const gridContainer = document.createElement("div");
+gridContainer.classList.add("mikki_tiles");
+
+// Loop through each row in the mikki array
+mikki.forEach((row) => {
+  // Create a row element
+  const rowElement = document.createElement("div");
+  rowElement.classList.add("mikki_row");
+
+  // Loop through each character in the row
+  for (const char of row) {
+    // Create a tile element
+    const tileElement = document.createElement("div");
+    tileElement.classList.add("mikki_tile");
+
+    // Check if the character is a period (.) and apply the .z class
+    if (char === ".") {
+      tileElement.classList.add("z");
+    }
+
+    // Append the tile element to the row
+    rowElement.appendChild(tileElement);
+  }
+
+  // Append the row to the grid container
+  gridContainer.appendChild(rowElement);
+});
+
+// Append the grid container to the document
+document.body.appendChild(gridContainer);
 // // Loop through each row in the "mikki" array
 // mikki.forEach(function (row) {
 //   // Create a new row element
@@ -328,9 +388,29 @@ tabs.forEach((tab) => {
 const elementButtonClass_next = document.querySelector(".next");
 const elementButtonClass_previous = document.querySelector(".previous");
 const slide = document.querySelectorAll(".slide");
-let index = 1;
-elementButtonClass_next.addEventListener("click", () => {});
-elementButtonClass_previous.addEventListener("click", () => {});
+let position = 0;
+
+elementButtonClass_next.addEventListener("click", () => {
+  slide[position].classList.remove("active");
+  position++;
+
+  if (position >= slide.length) {
+    position = 0;
+  }
+
+  slide[position].classList.add("active");
+});
+
+elementButtonClass_previous.addEventListener("click", () => {
+  slide[position].classList.remove("active");
+
+  position--;
+
+  if (position < 0) {
+    position = slide.length - 1;
+  }
+  slide[position].classList.add("active");
+});
 
 // accordion
 
@@ -364,6 +444,7 @@ function closePop_up() {
 
 elementButtonClass_login.addEventListener("click", showPop_up);
 elementButtonClass_close.addEventListener("click", closePop_up);
+
 //  prevent default
 const elementButtonLink = document.querySelector(".link-ebanoe");
 
@@ -376,7 +457,7 @@ elementButtonLink.addEventListener("click", (event) => {
 const elementButtonClass_b97 = document.querySelector(".b97");
 const elementButtonClass_t97 = document.querySelector(".t97");
 if (localStorage.getItem("Ad") === "None") {
-  elementButtonClass_b97.style.display = "none";
+  elementButtonClass_t97.style.display = "none";
 }
 
 elementButtonClass_b97.addEventListener("click", () => {
