@@ -273,116 +273,57 @@ elementButtonClass_b17_2.addEventListener("click", () => {
   currentPosition = 0;
 });
 
-// // #21  write mikki from array
-const mikkiGrid = document.getElementById("mikki_tiles");
-const cts = canvas.getContext("2d");
-const tileSize = 32;
+// #21  write mikki from array
 
-const tileMap = new TileMap(tileSize);
+const mikkiMap = document.querySelector(".mikki_tiles");
 
-function mikki() {
-  tileMap.draw(canvas, ctx);
-}
-
-var mikki = [
-  "XXXX        XXXX  ",
-  " XXXXXX      XXXXXX ",
-  "XXXX XX XXXX XX XXXX",
-  "XXX  XXXXXXXXXX  XXX",
-  "XXXXXXXXXXXXXXXXXXXX",
-  "XXXXXXX      XXXXXXX",
-  " XXXXX        XXXXX ",
-  "   XXX  XX XX XXX   ",
-  "    XX  XX XX XX    ",
-  "    XXX X  X  XX    ",
-  "    X         XX    ",
-  "    X    XXX  XX    ",
-  "    XX   XXX  XX    ",
-  "     XX      XX     ",
-  "      X  XX  X      ",
-  "       X    X       ",
-  "     XX XXXX XX     ",
-  "     XX      XX     ",
-  "    XX        XX    ",
-  "   XXXXXXXXXXXXXX   ",
-];
-const gridContainer = document.createElement("div");
-gridContainer.classList.add("mikki_tiles");
-
-// Loop through each row in the mikki array
 mikki.forEach((row) => {
-  // Create a row element
-  const rowElement = document.createElement("div");
-  rowElement.classList.add("mikki_row");
+  for (let char of row) {
+    if (char === " ") {
+      const cellElement = document.createElement("div");
 
-  // Loop through each character in the row
-  for (const char of row) {
-    // Create a tile element
-    const tileElement = document.createElement("div");
-    tileElement.classList.add("mikki_tile");
-
-    // Check if the character is a period (.) and apply the .z class
-    if (char === ".") {
-      tileElement.classList.add("z");
+      cellElement.className = "mikki_tile";
+      mikkiMap.appendChild(cellElement);
+    } else {
+      {
+        const cellElement = document.createElement("div");
+        cellElement.className = "mikki_tile";
+        cellElement.style.backgroundColor = "#000";
+        mikkiMap.appendChild(cellElement);
+      }
     }
-
-    // Append the tile element to the row
-    rowElement.appendChild(tileElement);
   }
-
-  // Append the row to the grid container
-  gridContainer.appendChild(rowElement);
 });
 
-// Append the grid container to the document
-document.body.appendChild(gridContainer);
-// // Loop through each row in the "mikki" array
-// mikki.forEach(function (row) {
-//   // Create a new row element
-//   var rowElement = document.createElement("div");
-//   rowElement.className = "mikki_row";
+// super Mario
 
-//   // Loop through each character in the row
-//   for (var i = 0; i < row.length; i++) {
-//     // Create a new tile element
-//     var tileElement = document.createElement("div");
-//     tileElement.className = "mikki_tile";
+const superMarioMap = document.querySelector(".scene");
 
-//     // Check if the character is 'X' and add a class for filled tiles
-//     if (row[i] === "X") {
-//       tileElement.classList.add("filled");
-//     }
-
-//     // Append the tile element to the row
-//     rowElement.appendChild(tileElement);
-//   }
-
-//   // Append the row to the grid
-//   mikkiGrid.appendChild(rowElement);
-// });
-
-const tabs = document.querySelectorAll(".item");
-let activeTabValue;
-let activeTab;
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    activeTab = tab;
-    activeTabValue = tab.getAttribute("data-tab");
-    console.log(activeTabValue);
-
-    tabs.forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    let allTabs = document.querySelectorAll(`[data-tab="${activeTabValue}"]`);
-    console.log(allTabs);
-
-    allTabs.forEach((item) => {
-      item.classList.add("active");
-    });
-  });
+map.forEach((row) => {
+  for (let char of row) {
+    if (char === "z") {
+      const cellElement = document.createElement("div");
+      cellElement.className = "tile x_zs";
+      superMarioMap.appendChild(cellElement);
+    }
+    // if (char === "w") {
+    //   const cellElement = document.createElement("div");
+    //   cellElement.className = ".tile.x_w";
+    //   superMarioMap.appendChild(cellElement);
+    // }
+    // if (char === "c") {
+    //   const cellElement = document.createElement("div");
+    //   cellElement.className = "tile";
+    //   superMarioMap.appendChild(cellElement);
+    // }
+    // if (char === "k") {
+    //   const cellElement = document.createElement("div");
+    //   cellElement.className = "tile";
+    //   superMarioMap.appendChild(cellElement);
+    // }
+  }
 });
+
 // caurusel
 
 const elementButtonClass_next = document.querySelector(".next");
