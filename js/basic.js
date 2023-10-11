@@ -28,6 +28,47 @@ const lit20 = "Last one".toUpperCase();
 
 // 3. Создать 10 объектов представляющих объекты реального мира. В каждом объекте должно быть не меньше 4 свойств.
 
+const city = {
+  name: "Kyiv",
+  country: "Ukraine",
+  status: "Capital",
+  population: 3000000,
+};
+
+const fruit = {
+  name: "Apple",
+  color: "Green",
+  taste: "Sweet",
+  weight: 150,
+};
+
+const laptop = {
+  brand: "Dell",
+  model: "Inspirion 8855",
+  screeSize: 15.3,
+  processor: "Intel i7 7700-HQ",
+};
+
+const mobile = {
+  brand: "Apple",
+  model: "Iphone 14 Pro",
+  color: "White",
+  storage: "128Gb",
+};
+
+const pet = {
+  name: "Cat",
+  color: [white, black, red],
+  age: 2,
+  breed: null,
+};
+
+const book = {
+  name: "Alice",
+  authore: "Cooper T.",
+  size,
+};
+
 // 4. Создать 10 массивов представляющих массивы некоторых значений из реальной жизни. В каждом массиве должно быть не меньше 4 элементов.
 
 // 5. Объявить 5 переменных с произвольным именем.
