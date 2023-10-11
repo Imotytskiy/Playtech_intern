@@ -416,6 +416,37 @@ dtElements.forEach((dt) => {
   });
 });
 
+// tabs
+const todayTab = document.querySelector('[data-tab="today"]');
+const tomorrowTab = document.querySelector('[data-tab="tomorrow"]');
+const dayTab = document.querySelector('[data-tab="23d"]');
+
+function active(someDay) {
+  const delActive = document.querySelectorAll(".item");
+  delActive.forEach((element) => {
+    element.classList.remove("active");
+  });
+  const dataTabValue = someDay.getAttribute("data-tab");
+  const addActive = document.querySelectorAll(
+    `.item[data-tab="${dataTabValue}"]`
+  );
+  addActive.forEach((element) => {
+    element.classList.add("active");
+  });
+}
+
+todayTab.addEventListener("click", function () {
+  active(todayTab);
+});
+
+tomorrowTab.addEventListener("click", function () {
+  active(tomorrowTab);
+});
+
+dayTab.addEventListener("click", function () {
+  active(dayTab);
+});
+
 //  pop_up task
 
 const elementButtonClass_overlay = document.querySelector(".overlay");
