@@ -281,7 +281,6 @@ mikki.forEach((row) => {
   for (let char of row) {
     if (char === " ") {
       const cellElement = document.createElement("div");
-
       cellElement.className = "mikki_tile";
       mikkiMap.appendChild(cellElement);
     } else {
@@ -296,33 +295,84 @@ mikki.forEach((row) => {
 });
 
 // super Mario
-
+const elementButtonClass_b18 = document.querySelector(".b18");
 const superMarioMap = document.querySelector(".scene");
+let x = 0;
+let y = 0;
 
-map.forEach((row) => {
-  for (let char of row) {
-    if (char === "z") {
-      const cellElement = document.createElement("div");
-      cellElement.className = "tile x_zs";
-      superMarioMap.appendChild(cellElement);
+function buildMarioWorld() {
+  map.forEach((row) => {
+    for (let char of row) {
+      if (char === " ") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "z") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_z";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "k") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_k";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "c") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_c";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "t") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_t";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "g") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_g";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "b") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_b";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "d") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_d";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      if (char === "w") {
+        const cellElement = document.createElement("div");
+        cellElement.className = "tile x_w";
+        cellElement.style.left = x + "px";
+        cellElement.style.top = y + "px";
+        superMarioMap.appendChild(cellElement);
+      }
+      x += 16;
     }
-    // if (char === "w") {
-    //   const cellElement = document.createElement("div");
-    //   cellElement.className = ".tile.x_w";
-    //   superMarioMap.appendChild(cellElement);
-    // }
-    // if (char === "c") {
-    //   const cellElement = document.createElement("div");
-    //   cellElement.className = "tile";
-    //   superMarioMap.appendChild(cellElement);
-    // }
-    // if (char === "k") {
-    //   const cellElement = document.createElement("div");
-    //   cellElement.className = "tile";
-    //   superMarioMap.appendChild(cellElement);
-    // }
-  }
-});
+    x = 0;
+    y += 16;
+  });
+}
+elementButtonClass_b18.addEventListener("click", buildMarioWorld);
 
 // caurusel
 
