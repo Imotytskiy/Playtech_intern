@@ -92,6 +92,68 @@ var hair = {
 };
 // 4. Создать 10 массивов представляющих массивы некоторых значений из реальной жизни. В каждом массиве должно быть не меньше 4 элементов.
 
+const fruits = ["яблоко", "банан", "апельсин", "груша"];
+
+const winNumbers = [45, 1, 15, 78, 13, 58];
+
+const daysOfWeek = [
+  {
+    name: "Понедельник",
+    weather: "Солнечно",
+    temperature: 25,
+    isWeekend: false,
+  },
+  {
+    name: "Вторник",
+    weather: "Пасмурно",
+    temperature: 20,
+    isWeekend: false,
+  },
+  {
+    name: "Среда",
+    weather: "Дождь",
+    temperature: 18,
+    isWeekend: false,
+  },
+  {
+    name: "Четверг",
+    weather: "Снег",
+    temperature: 10,
+    isWeekend: false,
+  },
+  {
+    name: "Пятница",
+    weather: "Пасмурно",
+    temperature: 22,
+    isWeekend: false,
+  },
+  {
+    name: "Суббота",
+    weather: "Облачно",
+    temperature: 23,
+    isWeekend: true,
+  },
+  {
+    name: "Воскресенье",
+    weather: "Солнечно",
+    temperature: 28,
+    isWeekend: true,
+  },
+];
+const monthsOfYear = ["январь", "февраль", "март", "апрель"];
+
+const animals = ["собака", "кошка", "слон", "тигр"];
+
+const carTypes = ["седан", "внедорожник", "грузовик", "спорткар"];
+
+const musicalInstruments = ["гитара", "скрипка", "флейта", "барабаны"];
+
+const food = ["пицца", "суши", "бургер", "салат"];
+
+const capitals = ["Париж", "Токио", "Лондон", "Рим"];
+
+const programmingLanguages = ["JavaScript", "Python", "Java", "C++"];
+
 // 5. Объявить 5 переменных с произвольным именем.
 
 // 6. Объявить еще 5 переменных и в момент объявления присвоить им значения произвольных типов данных.
