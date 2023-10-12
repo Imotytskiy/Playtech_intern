@@ -69,6 +69,27 @@ const book = {
   size,
 };
 
+const door = {
+  isOpen: false,
+  status: {
+    material: ["wood", "metal", "glass"],
+    id: "00231",
+  },
+};
+
+var person = {
+  name: "Ihor",
+  surname: "Moytskyi",
+  age: 37,
+  isMarried: true,
+};
+
+var hair = {
+  color: "black",
+  height: 120,
+  isHealthy: true,
+  naturalColor: true,
+};
 // 4. Создать 10 массивов представляющих массивы некоторых значений из реальной жизни. В каждом массиве должно быть не меньше 4 элементов.
 
 // 5. Объявить 5 переменных с произвольным именем.
