@@ -25,3 +25,28 @@
 .second-table td {
   border: 1px inset;
 }
+
+.third-table {
+  border: 1px outset;
+}
+
+.third-table th,
+.third-table td {
+  border: 1px inset;
+}
+
+.third-table th {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.third-all-col-center {
+  text-align: center;
+  padding: 5px;
+}
+
+.third-col-left {
+  text-align: left;
+  padding: 5px;
+  width: 150px;
+}
