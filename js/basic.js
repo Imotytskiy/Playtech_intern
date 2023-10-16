@@ -156,6 +156,12 @@ const programmingLanguages = ["JavaScript", "Python", "Java", "C++"];
 
 // 5. Объявить 5 переменных с произвольным именем.
 
+var variable1 = "Value 1";
+let variable2 = 42;
+const variable3 = [1, 2, 3];
+var variable4 = { name: "John", age: 30 };
+let variable5 = true;
+
 // 6. Объявить еще 5 переменных и в момент объявления присвоить им значения произвольных типов данных.
 
 // 7. Создать массив из элементов, значения которых представлены всеми изученными типами данных в JavaScript.

@@ -1,0 +1,18 @@
+.first-table {
+  border: 3px outset;
+}
+.first-table th,
+.first-table td {
+  border: 3px inset;
+}
+
+.first-col-left {
+  text-align: left;
+  padding: 5px;
+  width: 250px;
+}
+
+.first-all-col-center {
+  text-align: center;
+  padding: 5px;
+}
