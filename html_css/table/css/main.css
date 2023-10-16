@@ -16,3 +16,12 @@
   text-align: center;
   padding: 5px;
 }
+
+.second-table {
+  border: 1px outset;
+}
+
+.second-table th,
+.second-table td {
+  border: 1px inset;
+}
