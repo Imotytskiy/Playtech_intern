@@ -60,3 +60,25 @@
 .fourth-table td {
   border: 1px solid #c0c0c0;
 }
+
+.fifth-table {
+  border-spacing: 0px;
+  border: 6px solid rgb(233, 232, 231);
+}
+.fifth-table-first-row-bg-color {
+  color: beige;
+}
+
+.fifth-table-first-col {
+  border: none;
+  border-spacing: 0px;
+  background-color: rgb(142, 88, 192);
+}
+
+.fifth-table th,
+.fifth-table td {
+  border: none;
+}
+.fifth-table-bg-color {
+  background-color: #c0c0c0;
+}
