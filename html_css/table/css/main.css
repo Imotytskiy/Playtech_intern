@@ -50,3 +50,13 @@
   padding: 5px;
   width: 150px;
 }
+
+.fourth-table {
+  border-style: 2px double;
+  outline: 5px solid #c0c0c0;
+}
+
+.fourth-table th,
+.fourth-table td {
+  border: 1px solid #c0c0c0;
+}
