@@ -82,3 +82,41 @@
 .fifth-table-bg-color {
   background-color: #c0c0c0;
 }
+
+.six-table {
+  border-spacing: 0px;
+  background: linear-gradient(
+    to right,
+    #a3d3e6,
+    transparent,
+    transparent,
+    #d8ebee
+  );
+  background-position: center;
+  border: 1px solid rgb(43, 134, 111);
+}
+.six-table-first-row-bg-color {
+  color: beige;
+}
+
+.six-table th,
+.six-table td {
+  border-spacing: 0px;
+  border: 1px solid rgb(43, 134, 111);
+}
+.six-table-bg-color {
+  background-color: #c0c0c0;
+}
+
+.six-col-left {
+  text-align: left;
+  padding: 5px;
+  width: 100px;
+}
+
+.six-all-col-center {
+  text-align: center;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
